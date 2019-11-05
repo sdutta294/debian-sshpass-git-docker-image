@@ -9,3 +9,6 @@ WORKDIR /root/work/
 
 # install sshpass, git and slim down image for optimization
 RUN apt-get -y update && apt-get -y install sshpass && apt-get -y install git && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /usr/share/man/?? /usr/share/man/??_*
+
+# run a CMD to show sshpass usability
+CMD sshpass help
